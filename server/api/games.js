@@ -17,4 +17,15 @@ const getAllGames = async (query) => {
     }
 };
 
-module.exports = { getAllGames };
+const getGame = async (gameID) => {
+    try {
+        const response = await fetch(`${FREE_TO_PLAY_GAMES_API_BASE_URL}/game?id=${gameID}`);
+        checkAPIstatus(response.status);
+        const gameData = await response.json();
+        return gameData;
+    } catch (e) {
+        throw e;
+    }
+};
+
+module.exports = { getAllGames, getGame };
