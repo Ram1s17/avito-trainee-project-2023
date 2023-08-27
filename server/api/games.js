@@ -1,11 +1,12 @@
 const { FREE_TO_PLAY_GAMES_API_BASE_URL, FREE_TO_PLAY_GAMES_LIMIT } = require("./constants");
-const { paginate, processQueryParametrs } = require("./utils");
+const { paginate, processQueryParametrs, checkAPIstatus } = require("./utils");
 
 const getAllGames = async (query) => {
     try {
         const page = Number(query.page);
         const processedQueryParametrs = processQueryParametrs(query);
         const response = await fetch(`${FREE_TO_PLAY_GAMES_API_BASE_URL}/filter?${processedQueryParametrs}`);
+        checkAPIstatus(response.status);
         const gamesList = await response.json();
         return {
             totalGamesCount: gamesList.length,

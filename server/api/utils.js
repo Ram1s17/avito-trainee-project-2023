@@ -1,3 +1,5 @@
+const ApiError = require("../exceptions/apiError")
+
 const processQueryParametrs = (query) => {
     delete query.page;
     return (Object.entries(query).map(value => {
@@ -11,4 +13,16 @@ const paginate = (arr, page = 1, limit) => {
     return arr.slice(startIndex, endIndex);
 };
 
-module.exports = { processQueryParametrs, paginate };
+const checkAPIstatus = (status) => {
+    if (status === 200) {
+        return;   
+    }
+    if (status === 404) {
+        throw ApiError.ObjectNotFoundError();
+    }
+    if (status === 500) {
+        throw ApiError.UnexpectedAPIerror();
+    }
+}
+
+module.exports = { processQueryParametrs, paginate, checkAPIstatus };
