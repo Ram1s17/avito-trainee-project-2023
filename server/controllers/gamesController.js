@@ -3,8 +3,8 @@ const { getAllGames } = require("../api/games");
 class GamesController {
     async getAllGames(req, res, next) {
         try {
-            const games = await getAllGames();
-            res.json(games);
+            const gamesData = await getAllGames(req.query);
+            res.json(gamesData);
         } catch (e) {
             next(e);
         }
