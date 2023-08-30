@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300&display=swap');
+
+#header {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Handjet', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-align: center;
+
+}
+
+@media (width <= 610px) {
+    #header {
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+}

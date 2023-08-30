@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300&display=swap');
+
+#footer {
+    background-color: rgb(46, 46, 46);
+    display: flex;
+    justify-content: center;
+}
+
+#footer p {
+    color: white;
+    font-family: 'Handjet', cursive;
+    font-size: 25px;
+    text-align: center;
+}

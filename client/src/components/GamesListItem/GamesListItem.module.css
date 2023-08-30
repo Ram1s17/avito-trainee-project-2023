@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+.gamesListItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.gamesListItem:hover {
+    border: 1px solid white;
+    border-radius: 16px;
+    padding: 10px;
+    transition-delay: .2s;
+    -webkit-transition-delay: .2s;
+}
+
+.previewImage {
+    border-radius: 16px;
+}
+
+.gameTitle {
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.gameInfo {
+    display: flex;
+    align-content: center;
+    border-radius: 16px;
+    border: 1px solid white;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+}
+
+.gameInfo h3 {
+    flex-basis: 40%;
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    font-size: 15px;
+    padding-left: 25px;
+}
+
+.gameInfo p {
+    flex-basis: 60%;
+    color: white;
+    font-size: 15px;
+}
