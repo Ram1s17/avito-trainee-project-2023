@@ -1,13 +1,15 @@
 import React from "react";
 import { Pagination } from "antd";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { changePage } from "../../store/optionsSlice"
 
 const CustomPagination = ({ totalCount }) => {
+    const currentPage = useSelector((state) => state.options.page);
     const dispatch = useDispatch();
 
     return (
         <Pagination
+            current={currentPage}
             onChange={(page) => dispatch(changePage(page))}
             showSizeChanger={false}
             defaultCurrent={1}

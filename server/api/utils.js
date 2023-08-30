@@ -2,6 +2,9 @@ const ApiError = require("../exceptions/apiError")
 
 const processQueryParametrs = (query) => {
     delete query.page;
+    if (query.category === 'all') {
+        delete query.category;
+    }
     return (Object.entries(query).map(value => {
         return value.join('=');
     }).join('&'));
@@ -15,7 +18,7 @@ const paginate = (arr, page = 1, limit) => {
 
 const checkAPIstatus = (status) => {
     if (status === 200) {
-        return;   
+        return;
     }
     if (status === 404) {
         throw ApiError.ObjectNotFoundError();

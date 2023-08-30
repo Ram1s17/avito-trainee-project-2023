@@ -6,7 +6,7 @@ export const freeToPlayGameApi = createApi({
     baseQuery: retry(fetchBaseQuery({ baseUrl: API_BASE_URL }), { maxRetries: 3 }),
     endpoints: (builder) => ({
         getAllGamesForCurrentPage: builder.query({
-            query: (page = 1) => `/games?tag=fantasy.pvp&platform=all&page=${page}`
+            query: ({category, platform, sortBy, page}) => `/games?category=${category}&platform=${platform}&sort-by=${sortBy}&page=${page}`
         })
     })
 });
