@@ -24,6 +24,11 @@ export const sortOptions = [
     'relevance'
 ].map(sortOption => ({ label: sortOption, value: sortOption }));
 
+export const messageByStatus = {
+    404: "The page you visited does not exist.",
+    500: "Something went wrong."
+}
+
 export const convertDate = (date) => {
     return date.split("-").reverse().join(".");
 };

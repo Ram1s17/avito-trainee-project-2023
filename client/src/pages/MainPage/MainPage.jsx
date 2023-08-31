@@ -7,18 +7,27 @@ import CustomHeader from "../../components/CustomHeader/CustomHeader";
 import CustomFooter from "../../components/CustomFooter/CustomFooter";
 import CustomPagination from "../../components/CustomPagination/CustomPagination";
 import FilterBar from "../../components/FilterBar/FilterBar";
+import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
+import ErrorPage from "../ErrorPage/ErrorPage";
+import { messageByStatus } from "../../utils/utils";
 
 const { Content } = Layout;
 
 const MainPage = () => {
     const options = useSelector((state) => state.options);
 
-    const { data: games, isLoading } = useGetAllGamesForCurrentPageQuery(options);
+    const { data: games, isLoading, isError, error } = useGetAllGamesForCurrentPageQuery(options);
 
     if (isLoading) {
         return (
-            <div>Loading</div>
-        )
+            <LoadingSpinner />
+        );
+    }
+
+    if (isError) {
+        return (
+            <ErrorPage status={error.status} message={messageByStatus[error.status]} />
+        );
     }
 
     return (
