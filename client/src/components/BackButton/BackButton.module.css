@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300&display=swap');
+
+#backButton {
+    font-family: 'Handjet', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px 50px;
+    margin: 10px 10px;
+    border-radius: 16px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+}
+
+#backButton:hover {
+    background-color: white;
+    color: black;
+}

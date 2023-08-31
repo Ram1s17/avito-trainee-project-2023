@@ -1,0 +1,36 @@
+.sectionTitle {
+    font-family: 'Handjet', cursive;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+#systemRequirements {
+    display: flex;
+    flex-direction: column;
+}
+
+.systemRequirementItem {
+    display: flex;
+    align-content: center;
+    border-radius: 16px;
+    border: 1px solid white;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+}
+
+.systemRequirementItem h3 {
+    flex-basis: 45%;
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    font-size: 15px;
+    padding-left: 25px;
+}
+
+.systemRequirementItem p {
+    flex-basis: 55%;
+    color: white;
+    font-size: 15px;
+}

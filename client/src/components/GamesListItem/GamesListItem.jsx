@@ -2,10 +2,17 @@ import React from "react";
 import { Col, Image } from "antd";
 import styles from "./GamesListItem.module.css";
 import { convertDate } from "../../utils/utils";
+import { useNavigate } from "react-router-dom";
 
 const GamesListItem = ({ game }) => {
+    const navigate = useNavigate();
+
     return (
-        <Col xl={7} className={styles.gamesListItem}>
+        <Col
+            xl={7}
+            className={styles.gamesListItem}
+            onClick={() => navigate(`/${game.id}`)}
+        >
             <Image
                 className={styles.previewImage}
                 src={game.thumbnail}

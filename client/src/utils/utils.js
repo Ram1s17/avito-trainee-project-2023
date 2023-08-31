@@ -27,7 +27,11 @@ export const sortOptions = [
 export const messageByStatus = {
     404: "The page you visited does not exist.",
     500: "Something went wrong."
-}
+};
+
+export const changeFirstLetterToUpperCase = (word) => {
+    return word[0].toUpperCase() + word.slice(1);
+};
 
 export const convertDate = (date) => {
     return date.split("-").reverse().join(".");

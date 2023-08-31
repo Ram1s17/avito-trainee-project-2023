@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300&display=swap');
+
+.sectionTitle {
+    font-family: 'Handjet', cursive;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.image {
+    border-radius: 25px;
+}
+
+#gameDescription {
+    font-family: 'Prompt', sans-serif;
+    color: white;
+    margin-top: 20px;
+}

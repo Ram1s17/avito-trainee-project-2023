@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300&display=swap');
+
+.sectionTitle {
+    font-family: 'Handjet', cursive;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.previewImage {
+    border-radius: 16px;
+    border: 1px solid white;
+}
+
+#gameInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+#gameInfo h2 {
+    font-family: 'Prompt', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.gameInfoItem {
+    display: flex;
+    align-content: center;
+    border-radius: 16px;
+    border: 1px solid white;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+}
+
+.gameInfoItem h3 {
+    flex-basis: 45%;
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    font-size: 15px;
+    padding-left: 25px;
+}
+
+.gameInfoItem p {
+    flex-basis: 55%;
+    color: white;
+    font-size: 15px;
+}
