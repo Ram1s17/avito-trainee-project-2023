@@ -3,7 +3,7 @@ const { paginate, processQueryParametrs, checkAPIstatus } = require("./utils");
 
 const getAllGames = async (query) => {
     try {
-        const page = Number(query.page);
+        const page = query.page ? Number(query.page) : 1;
         const processedQueryParametrs = processQueryParametrs(query);
         const response = await fetch(`${FREE_TO_PLAY_GAMES_API_BASE_URL}/games?${processedQueryParametrs}`);
         checkAPIstatus(response.status);
